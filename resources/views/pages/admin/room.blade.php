@@ -17,6 +17,10 @@
                 <button type="button" class="btn rounded-pill btn-primary" onclick="createRoom()">
                     <span class="tf-icons bx bxs-plus-square "></span>&nbsp; Tambah kamar baru
                 </button>
+                <button type="button" class="btn rounded-pill btn-secondary" onclick="importRoom()">
+                    <span class="tf-icons bx bxs-plus-square "></span>&nbsp; Import Data
+                </button>
+
             </h5>
             <div class="table-responsive text-nowrap m-3">
                 <table class="table table-hover" id="roomTable">
@@ -40,6 +44,7 @@
     </div>
     @include('components.modals.room.create')
     @include('components.modals.room.edit')
+    @include('components.modals.room.import')
 
     <!-- / Content -->
 

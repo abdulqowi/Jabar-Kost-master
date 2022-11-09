@@ -6,6 +6,15 @@
         $('#createRoomModal').modal('show');
     }
 
+    const importRoom = () => {
+        $('#importRoom').modal('show');
+    }
+        
+    
+    
+    
+    
+    
     const deleteRoom = (id) => {
         Swal.fire({
             title: 'Apa anda yakin untuk menghapus?',
@@ -90,6 +99,8 @@
 
         $('#roomTable').DataTable({
             order: [],
+            dom : 'Bfrtip',
+            buttons : ['excel','pdf'], 
             lengthMenu: [[10, 25, 50, 100, -1], ['10', '25', '50', '100', 'Semua']],
             filter: true,
             processing: true,

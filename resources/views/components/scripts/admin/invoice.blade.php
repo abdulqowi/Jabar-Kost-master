@@ -119,7 +119,7 @@
                 'X-CSRF-TOKEN': '{{ csrf_token() }}'
             }
         });
-
+        
         $('#invTable').DataTable({
             order: [],
             lengthMenu: [[10, 25, 50, 100, -1], ['10', '25', '50', '100', 'Semua']],

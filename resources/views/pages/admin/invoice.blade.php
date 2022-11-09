@@ -20,7 +20,7 @@
                 </button>
             </h5>
             <div class="table-responsive text-nowrap m-3">
-                <table class="table table-hover" id="invTable">
+                <table class="table table-hover " id="invTable">
                     <thead>
                         <tr>
                             <th>#</th>

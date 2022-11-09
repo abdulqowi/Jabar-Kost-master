@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\RoomImport;
 use App\Room;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
+use Maatwebsite\Excel\Facades\Excel;
 use Yajra\DataTables\Facades\DataTables;
 
 class RoomController extends Controller
@@ -198,5 +201,11 @@ class RoomController extends Controller
             };
         // }
         return Response::json($json);
+    }
+
+    public function import(Request $request){
+        $data = $request -> file('import');
+        Excel::import(new RoomImport,$data);
+        return redirect()->back();
     }
 }
